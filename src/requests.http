@@ -1,0 +1,171 @@
+### register user:
+POST http://localhost:8080/api/v1/users
+Content-Type: application/json
+
+{
+  "name": {
+    "first": "shahar",
+    "last": "katz"
+  },
+  "address": {
+    "street": "123 Main St",
+    "city": "Anytown",
+    "country": "Israel",
+    "houseNumber": 20,
+    "zip": "12345"
+  },
+  "image": {
+    "alt": "user-profile",
+    "url": "https://picsum.photos/200/300"
+  },
+  "phone": "050-8123091",
+  "email": "shahar@gmail.com",
+  "isBusiness": true,
+  "password": "123456aA!"
+}
+
+
+### Login:
+POST http://localhost:8080/api/v1/users/login
+Content-Type: application/json
+
+{
+  "email": "yam@gmail.com",
+  "password": "123456aA!"
+}
+
+
+### GET All users:
+GET http://localhost:8080/api/v1/users
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlhbUBnbWFpbC5jb20iLCJpYXQiOjE3MDM4NTI0OTN9.UjPj2M489PduY70PwHXMlce63er4upHkiFWGQP2XRoI
+
+
+### Get user by id:
+GET http://localhost:8080/api/v1/users/657ec07329ce1d74f6983c6b
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlhbUBnbWFpbC5jb20iLCJpYXQiOjE3MDQwMzA0MzF9.V1ABReQGBzzxz9NzsoRUfVuzNBa199QK8-MOL3xyuuU
+
+
+### Edit user:
+PUT http://localhost:8080/api/v1/users/65916ff9a1b9e9206abd4654
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IldheW5lQGJhdGNhdmUuY29tIiwiaWF0IjoxNzA0MDMxNTIyfQ.2k2Z1L5BsfYeNsGNWCSROk3ZNpitzgLXfbTPTI_v9bk
+Content-Type: application/json
+
+{
+  "name": {
+    "first": "Bruce",
+    "last": "Wayne"
+  },
+  "address": {
+    "street": "123 Main St",
+    "city": "Anytown",
+    "country": "Israel",
+    "houseNumber": 20,
+    "zip": "12345"
+  },
+  "image": {
+    "alt": "user-profile",
+    "url": "https://picsum.photos/200/300"
+  },
+  "phone": "050-8123091",
+  "email": "Wayne@batcave.com",
+  "isBusiness": true,
+  "password": "123456aA!" 
+}
+
+
+### Change business status:
+PATCH  http://localhost:8080/api/v1/users/657ec07329ce1d74f6983c6b
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9yaUBnbWFpbC5jb20iLCJpYXQiOjE3MDM5NDQzOTl9.3OosHrs6j5xAdD5GwOzYWThnafMpCc5wvU_IEzANc5Q
+Content-Type: application/json
+
+{ 
+  "isBusiness": true
+}
+
+
+### DELETE user:
+DELETE http://localhost:8080/api/v1/users/65912e4ccdc9237a5365f87d
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkaTEyQGdtYWlsLmNvbSIsImlhdCI6MTcwNDAzMjAzNH0.jdtJyIvt9NjxYVcJ-GTKpsCczdHv2Bcuw69HQRss7Fs
+
+
+### Get all cards:
+GET http://localhost:8080/api/v1/cards
+
+
+### Get my-cards:
+GET http://localhost:8080/api/v1/cards/my-cards
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9yaUBnbWFpbC5jb20iLCJpYXQiOjE3MDQwMjUzNjR9.vEbo2Mo5-yyHl1LlA2xaGDXGE9xNPTD9a-Eqy02i_Sk
+
+
+### GET Card by id:
+GET http://localhost:8080/api/v1/cards/658c3fb75c6168bdc03b700f
+
+
+### Create new card:
+POST http://localhost:8080/api/v1/cards
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9yaUBnbWFpbC5jb20iLCJpYXQiOjE3MDQwMjg4MTl9.O2L5z-NSoC0-moxhZT_vdtBciUmFx2XhnpWazTF68eE
+Content-Type: application/json
+
+{
+    "title": "card 10",
+    "subtitle": "new card",
+    "description": "new card description",
+    "phone": "050-1234567",
+    "email": "e@gamil.com",
+    "web": "http://www.google.com",
+    "image": {
+      "url": "https://picsum.photos/200/300",
+      "alt": "card-img"
+    },
+    "address": {
+        "city": "new city",
+        "country": "new country",
+        "street": "new street",
+        "houseNumber": 21
+    }
+}
+
+
+### Edit card:
+PUT http://localhost:8080/api/v1/cards/65916bf18169bf67bf29643a
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9yaUBnbWFpbC5jb20iLCJpYXQiOjE3MDQwMjkyNDN9.pi8tv0cJl2N0TtEgJNaLb_9wsFsL7dXme9Gx2iuRCIo
+Content-Type: application/json
+
+{
+    "title": "55555",
+    "subtitle": "new card",
+    "description": "new card description",
+    "phone": "050-1234567",
+    "email": "e@gamil.com",
+    "web": "http://www.google.com",
+    "image": {
+      "url": "https://picsum.photos/200/300",
+      "alt": "card-img"
+    },
+    "address": {
+        "city": "new city",
+        "country": "new country",
+        "street": "new street",
+        "houseNumber": 21
+    }
+}
+
+
+### Like card:
+PATCH  http://localhost:8080/api/v1/cards/658c3fb75c6168bdc03b700f
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9yaUBnbWFpbC5jb20iLCJpYXQiOjE3MDM3NzE2NTN9.U8EpeoOoZTcJeP93JJAt3Unuhh9TIbaDBVslZKo5fNo
+
+
+### DELETE card:
+DELETE http://localhost:8080/api/v1/cards/65916bf18169bf67bf29643a
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhckBnbWFpbC5jb20iLCJpYXQiOjE3MDQwMjk4NjN9.hfwF4AQq0lkd8Wjmxx1jxnd3hCrHwfuMigGQARCOx4M
+
+
+### Change bizNumber by admin:
+PATCH http://localhost:8080/api/v1/cards/bizNumber/658c3fb75c6168bdc03b700f
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InlhbUBnbWFpbC5jb20iLCJpYXQiOjE3MDM5MzQ1NTh9.Bextir7C4pdh7lRXEHiBNSY4H5CcHefhts1gn-UOWKg
+Content-Type: application/json
+
+{
+  "bizNumber": 42556545555
+}

@@ -1,0 +1,1 @@
+{"date":"2023-12-30T13:39:22.088Z","error":{"code":11000,"index":0,"keyPattern":{"email":1},"keyValue":{"email":"gidi@gmail.com"}},"level":"error","message":"E11000 duplicate key error collection: biz_cards_dev.users index: email_1 dup key: { email: \"gidi@gmail.com\" }"}

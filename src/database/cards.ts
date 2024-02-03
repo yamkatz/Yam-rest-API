@@ -1,0 +1,62 @@
+export const cards = [
+  {
+    title: "card1",
+    subtitle: "card1 sub",
+    description: "card card",
+    phone: "050-8123091",
+    email: "Willis@batcave.com",
+    web: "",
+    image: {
+      alt: "user-profile",
+      url: "https://picsum.photos/200/300",
+    },
+    address: {
+      city: "Anytown",
+      state: "",
+      country: "Israel",
+      street: "123 Main St",
+      zip: "12345",
+      houseNumber: 20,
+    },
+  },
+  {
+    title: "card2",
+    subtitle: "card2 sub",
+    description: "card222",
+    phone: "050-8123091",
+    email: "Willis@batcave.com",
+    web: "",
+    image: {
+      alt: "user-profile",
+      url: "https://picsum.photos/200/300",
+    },
+    address: {
+      city: "Anytown",
+      state: "",
+      country: "Israel",
+      street: "123 Main St",
+      zip: "12345",
+      houseNumber: 20,
+    },
+  },
+  {
+    title: "card3 ",
+    subtitle: "card3 sub",
+    description: "card card",
+    phone: "050-8123091",
+    email: "Willis@batcave.com",
+    web: "",
+    image: {
+      alt: "user-profile",
+      url: "https://picsum.photos/200/300",
+    },
+    address: {
+      city: "Anytown",
+      state: "",
+      country: "Israel",
+      street: "123 Main St",
+      zip: "12345",
+      houseNumber: 20,
+    },
+  },
+];
